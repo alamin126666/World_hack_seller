@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HGZY HACK BY WORLD HACK SELLER</title>
+  <style>
+    /* Reset and basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #000;
+      color: #fff;
+      font-family: sans-serif;
+      overflow: hidden;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+    /* Snowfall animation */
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(100vh);
+      }
+    }
+    /* Glowing logo */
+    .logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 30px;
+      box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff;
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+      }
+      to {
+        box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff;
+      }
+    }
+    /* Card styles */
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+    }
+    #cardview1, #cardview2, #cardview3 {
+      display: none;
+    }
+    /* Table styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #fff;
+      padding: 5px;
+    }
+    /* Button styles */
+    .btn {
+      background: #0ff;
+      color: #000;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    /* Login section */
+    #cardview4 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #edittext1 {
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Snowflakes -->
+  <div id="snow-container"></div>
+
+  <div class="container">
+    <!-- Logo -->
+    <img src="https://i.postimg.cc/m24CXqvc/a4e6d048-021e-4b3d-8cc9-cb10961ce48f.jpg" alt="Logo" class="logo" />
+
+    <!-- Login Card -->
+    <div class="card" id="cardview4">
+      <input type="password" id="edittext1" placeholder="Enter Password" />
+      <button class="btn" onclick="handleLogin()">HACK LOGIN</button>
+    </div>
+
+    <!-- Prediction Cards -->
+    <div class="card" id="cardview1">
+      <div id="textview1">PREDICTION: </div>
+    </div>
+    <div class="card" id="cardview2">
+      <div id="textview2">Period: </div>
+      <div id="textview3">Timer: </div>
+    </div>
+    <div class="card" id="cardview3">
+      <table id="predictionHistoryTable">
+        <thead>
+          <tr>
+            <th>Period</th>
+            <th>Predicted</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <div>
+        <button class="btn" onclick="prevPage()">Preview</button>
+        <button class="btn" onclick="nextPage()">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Snowfall effect
+    const snowContainer = document.getElementById('snow-container');
+    function createSnowflake() {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.style.left = Math.random() * window.innerWidth + 'px';
+      snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      snowflake.style.opacity = Math.random();
+      snowContainer.appendChild(snowflake);
+      setTimeout(() => {
+        snowflake.remove();
+      }, 5000);
+    }
+    setInterval(createSnowflake, 200);
+
+    // Login functionality
+    function handleLogin() {
+      const password = document.getElementById('edittext1').value;
+      if (password === 'WORLD-HACKER') {
+        document.getElementById('cardview4').style.display = 'none';
+        document.getElementById('cardview1').style.display = 'block';
+        document.getElementById('cardview2').style.display = 'block';
+        document.getElementById('cardview3').style.display = 'block';
+        startTimer();
+      } else {
+        window.location.href = 'https://t.me/+Br6zE_rf5ndmOGVl';
+      }
+    }
+
+    // Timer and prediction
+    let currentPeriod = '';
+    const predictions = ['BIG', 'SMALL', 'RED', 'GREEN'];
+    const history = [];
+    let currentPage = 0;
+    const itemsPerPage = 5;
+
+    function startTimer() {
+      setInterval(() => {
+        const now = new Date();
+        const seconds = now.getUTCSeconds();
+        const remainingSeconds = 60 - seconds;
+        const minutes = now.getUTCHours() * 60 + now.getUTCMinutes();
+        const period = now.getUTCFullYear().toString() +
+                       (now.getUTCMonth()+1).toString().padStart(2, '0') +
+                       now.getUTCDate().toString().padStart(2, '0') +
+                       '1000' + (10001 + minutes).toString();
+        document.getElementById('textview2').innerText = 'Period: ' + period;
+        document.getElementById('textview3').innerText = 'Timer: 00 : ' + remainingSeconds.toString().padStart(2, '0');
+
+        if (period !== currentPeriod) {
+          currentPeriod = period;
+          const prediction = predictions[Math.floor(Math.random() * predictions.length)];
+          document.getElementById('textview1').innerText = 'PREDICTION: ' + prediction;
+          history.unshift({ period, prediction });
+          renderTable();
+        }
+      }, 1000);
+    }
+
+    function renderTable() {
+      const tbody = document.querySelector('#predictionHistoryTable tbody');
+      tbody.innerHTML = '';
+      const start = currentPage * itemsPerPage;
+      const end = start + itemsPerPage;
+      const pageItems = history.slice(start, end);
+      pageItems.forEach(item => {
+        const row = document.createElement('tr');
+        const periodCell = document.createElement('td');
+        periodCell.innerText = item.period;
+        const predictionCell = document.createElement('td');
+        predictionCell.innerText = item.prediction;
+        row.appendChild(periodCell);
+        row.appendChild(predictionCell);
+        tbody.appendChild(row);
+      });
+    }
+
+    function prevPage() {
+      if (currentPage > 0) {
+        currentPage--;
+        renderTable();
+      }
+    }
+
+    function nextPage() {
+      if ((currentPage + 1) * itemsPerPage < history.length) {
+        currentPage++;
+        renderTable();
+      }
+    }
+  </script>
+</body>
+</html>
